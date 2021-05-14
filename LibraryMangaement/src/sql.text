@@ -1,0 +1,46 @@
+Please execute these queries in your MySQL command line client.
+
+1. create database practice;
+
+2. create table account(
+   username varchar(100) primary key,
+   name varchar(100) not null,
+   password varchar(30) not null,
+   sec_q varchar(100) not null,
+   sec_ans varchar(50) not null);
+
+3. create table book(
+   book_id varchar(20) primary key,
+   name varchar(100) not null,
+   isbn varchar(30) not null,
+   publisher varchar(100) not null,
+   edition varchar(50) not null,
+   price varchar(10) not null,
+   pages varchar(30) not null);
+
+3. create table issueBook(
+   book_id varchar(20) primary key,
+   student_id varchar(20) not null,
+   bname varchar(100) not null,
+   sname varchar(100) not null,
+   course varchar(30) not null,
+   branch varchar(10) not null,
+   dateOfIssue varchar(50) not null);
+
+4. create table returnBook(
+   book_id varchar(20) primary key,
+   student_id varchar(20) not null,
+   bname varchar(100) not null,
+   sname varchar(100) not null,
+   course varchar(30) not null,
+   branch varchar(10) not null,
+   dateOfReturn varchar(50) not null,
+   dateOfIssue varchar(50) not null);
+
+5. create table student(
+   student_id varchar(10) primary key,
+   name varchar(100) not null,
+   father varchar(100) not null,
+   course varchar(30), not null,
+   year varchar(10) not null,
+   semester varchar(10) not null);
